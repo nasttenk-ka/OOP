@@ -1,0 +1,7 @@
+[b]**jh**wekjhxkdxh [/b]
+[yellow]ok[/yellow]
+[i]ok[/i]
+[b]ok[/b]
+[s][u][i]o[b]k[/i][/b][/u][/s]
+[#00ff00]green ok[/#00ff00]
+[reverse]reverse[/reverse]

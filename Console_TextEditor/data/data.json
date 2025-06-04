@@ -1,0 +1,65 @@
+{
+  "users": [
+    {
+      "login": "Nastya",
+      "password": "nk2006",
+      "notifications": []
+    },
+    {
+      "login": "Katya",
+      "password": "123",
+      "notifications": []
+    },
+    {
+      "login": "Ilya",
+      "password": "123",
+      "notifications": []
+    },
+    {
+      "login": "DAshaalallalalalala",
+      "password": "123",
+      "notifications": []
+    }
+  ],
+  "authorized_user": null,
+  "documents": [
+    {
+      "name": "default.txt",
+      "author": null,
+      "redactors": [
+        "Ilya",
+        "Katya"
+      ]
+    },
+    {
+      "name": "ok.json",
+      "author": "Katya",
+      "redactors": [
+        "Nastya"
+      ]
+    },
+    {
+      "name": "aga.json",
+      "author": "Nastya",
+      "redactors": []
+    },
+    {
+      "name": "testJsonToXML.json",
+      "author": "Nastya",
+      "redactors": []
+    },
+    {
+      "name": "testXMLToJson.xml",
+      "author": "Nastya",
+      "redactors": []
+    },
+    {
+      "name": "test.md",
+      "author": "Nastya",
+      "redactors": []
+    }
+   
+  ],
+  "current_document": null,
+  "text": null
+}

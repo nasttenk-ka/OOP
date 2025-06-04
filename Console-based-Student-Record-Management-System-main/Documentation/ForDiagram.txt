@@ -1,0 +1,101 @@
+@startuml
+skinparam packageStyle rectangle
+
+package "Presentation Layer" {
+    class Main {
+        +validate_name(name)
+        +validate_grade(grade)
+        +main()
+    }
+}
+
+package "Application Layer" {
+    class AddStudentCommand {
+        +execute()
+    }
+    class EditStudentCommand {
+        +execute()
+    }
+    class ViewStudentsCommand {
+        +execute()
+    }
+}
+
+package "Domain Layer" {
+    class Student {
+        -student_id: str
+        -name: str
+        -grade: int
+        +__str__()
+    }
+
+    class Quote {
+        -content: str
+        -author: str
+        +__str__()
+    }
+
+    class StudentFactory {
+        +create(dto: StudentDTO): Student
+    }
+
+    class QuoteFactory {
+        +create(dto: QuoteDTO): Quote
+    }
+}
+
+package "DTOs" {
+    class StudentDTO {
+        -student_id: str
+        -name: str
+        -grade: int
+    }
+
+    class QuoteDTO {
+        -content: str
+        -author: str
+    }
+}
+
+package "Data Access Layer" {
+    class StudentRepository {
+        +load_students()
+        +save_students(data)
+        +add_student_to_file(student)
+        +update_student_in_file(id, name, grade)
+        +get_all_students()
+    }
+
+    class QuoteAPIAdapter {
+        +get_quote(): Quote
+    }
+}
+
+' Relationships
+Main --> AddStudentCommand
+Main --> EditStudentCommand
+Main --> ViewStudentsCommand
+Main --> StudentDTO
+Main --> StudentRepository
+
+AddStudentCommand --> StudentFactory
+AddStudentCommand --> StudentRepository
+AddStudentCommand --> QuoteAPIAdapter
+AddStudentCommand --> StudentDTO
+
+EditStudentCommand --> StudentRepository
+
+
+ViewStudentsCommand --> StudentRepository
+
+StudentFactory --> Student
+StudentFactory --> StudentDTO
+
+QuoteFactory --> Quote
+QuoteFactory --> QuoteDTO
+
+QuoteAPIAdapter --> Quote
+QuoteAPIAdapter --> QuoteDTO
+QuoteAPIAdapter --> QuoteFactory
+
+@enduml

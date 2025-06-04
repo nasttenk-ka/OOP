@@ -1,0 +1,32 @@
+[
+    {
+        "student_id": "1",
+        "name": "Ilya",
+        "grade": 35
+    },
+    {
+        "student_id": "2",
+        "name": "Asya",
+        "grade": 19
+    },
+    {
+        "student_id": "3",
+        "name": "Lola",
+        "grade": 67
+    },
+    {
+        "student_id": "4",
+        "name": "Nastya",
+        "grade": 19
+    },
+    {
+        "student_id": "5",
+        "name": "OLYA",
+        "grade": 42
+    },
+    {
+        "student_id": "6",
+        "name": "Ulalala",
+        "grade": 25
+    }
+]
